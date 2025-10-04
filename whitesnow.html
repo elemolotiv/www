@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow White Story</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+            height: 100vh;
+            color: #000;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            transition: transform 0.3s ease;
+        }
+
+        .column {
+            height: 100vh;
+            overflow-y: auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left-column {
+            flex: 1;
+            max-width: 200px;
+            background-color: #e6f2ff;
+        }
+
+        .center-column {
+            flex: 1;
+            background-color: #f5f5f5;
+        }
+
+        .right-column {
+            flex: 1;
+            max-width: 200px;
+            background-color: #e6ffe6;
+        }
+
+        .toc {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toc h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 0.8rem;
+        }
+
+        .toc a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        .story h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        .story h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .story h2:first-child {
+            margin-top: 0;
+        }
+
+        .story p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #000;
+            text-align: justify;
+        }
+
+        .right-column h1 {
+            font-size: 2.5rem;
+            color: #000;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100vw;
+            }
+
+            .left-column,
+            .right-column {
+                position: fixed;
+                top: 0;
+                height: 100vh;
+                width: 80vw;
+                max-width: 300px;
+                z-index: 1000;
+                transition: transform 0.3s ease;
+            }
+
+            .left-column {
+                left: 0;
+                transform: translateX(-100%);
+            }
+
+            .right-column {
+                right: 0;
+                transform: translateX(100%);
+            }
+
+            .container.show-left .left-column {
+                transform: translateX(0);
+            }
+
+            .container.show-right .right-column {
+                transform: translateX(0);
+            }
+
+            .center-column {
+                width: 100vw;
+                max-width: 100vw;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container show-center">
+        <div class="column left-column">
+            <div class="toc">
+                <h1>Table of Contents</h1>
+                <ul>
+                    <li><a href="#para1">The Queen's Wish</a></li>
+                    <li><a href="#para2">The Magic Mirror</a></li>
+                    <li><a href="#para3">The Huntsman's Task</a></li>
+                    <li><a href="#para4">Lost in the Forest</a></li>
+                    <li><a href="#para5">The Seven Dwarfs</a></li>
+                    <li><a href="#para6">The Poisoned Comb</a></li>
+                    <li><a href="#para7">The Poisoned Apple</a></li>
+                    <li><a href="#para8">The Glass Coffin</a></li>
+                    <li><a href="#para9">The Prince's Kiss</a></li>
+                    <li><a href="#para10">Happily Ever After</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="column center-column">
+            <div class="story">
+                <h1>Snow White Story</h1>
+                <h2 id="para1">The Queen's Wish</h2>
+                <p>Once upon a time, in the middle of winter when snowflakes fell like feathers from the sky, a queen sat sewing at her window, which had a frame of black ebony wood. As she sewed, she pricked her finger with the needle, and three drops of blood fell onto the snow. The red blood looked so beautiful against the white snow that she thought to herself, "If only I had a child as white as snow, as red as blood, and as black as the wood in this frame." Soon afterward, she had a little daughter who was as white as snow, as red as blood, and with hair as black as ebony, and she was called Snow White. Sadly, the queen died shortly after the child was born.</p>
+
+                <h2 id="para2">The Magic Mirror</h2>
+                <p>A year later, the king took another wife. She was a beautiful woman, but she was proud and arrogant, and she could not bear to be surpassed in beauty by anyone. She possessed a magic mirror, and when she stood before it and looked at herself, she would ask: "Mirror, mirror, on the wall, who is the fairest of them all?" The mirror would always reply, "You, my queen, are the fairest of all." Then she was satisfied, for she knew that the mirror spoke the truth. But Snow White grew up and became more and more beautiful. When she was seven years old, she was as beautiful as the light of day, and more beautiful than the queen herself.</p>
+
+                <h2 id="para3">The Huntsman's Task</h2>
+                <p>One day when the queen asked her mirror, "Mirror, mirror, on the wall, who is the fairest of them all?" it replied, "You, my queen, are fair, it is true, but Snow White is a thousand times fairer than you." The queen was horrified and turned yellow and green with envy. From that hour on, whenever she looked at Snow White, her heart turned against the girl. Envy and pride grew like weeds in her heart, until she had no peace day or night. Finally, she called a huntsman and said, "Take the child out into the forest. I never want to see her again. Kill her, and bring me back her lungs and liver as proof."</p>
+
+                <h2 id="para4">Lost in the Forest</h2>
+                <p>The huntsman obeyed and took Snow White into the forest, but when he drew his knife to pierce her innocent heart, she began to weep and said, "Oh, dear huntsman, spare my life. I will run into the wild forest and never come home again." Because she was so beautiful, the huntsman took pity on her and said, "Run away then, you poor child." He thought, "The wild animals will soon devour her anyway." A young boar came running by, and he killed it, took out its lungs and liver, and brought them to the queen as proof. The cook was ordered to prepare them with salt, and the wicked woman ate them, thinking she had eaten Snow White's lungs and liver.</p>
+
+                <h2 id="para5">The Seven Dwarfs</h2>
+                <p>Now poor Snow White was all alone in the great forest, and she was so afraid that she looked at every leaf on every tree and did not know what to do. She began to run, over sharp stones and through thorns, and wild animals jumped at her but did her no harm. She ran as far as her feet could carry her, and when evening came, she saw a little house and went inside to rest. Everything in the house was small but indescribably neat and clean. There was a little table covered with a white tablecloth and seven little plates, each with its own spoon, and seven little knives and forks and seven little cups. Against the wall were seven little beds, side by side, covered with snow-white sheets. Snow White was so hungry and thirsty that she ate a little from each plate and drank a little from each cup. Then, because she was so tired, she lay down in one of the beds and fell asleep.</p>
+
+                <h2 id="para6">The Poisoned Comb</h2>
+                <p>When the seven dwarfs came home that evening, they were shocked to discover that someone had been in their house. They found Snow White sleeping and were amazed by her beauty. They let her sleep peacefully through the night. In the morning, Snow White told them her story, and the dwarfs said, "If you will keep house for us, cook, make the beds, wash, sew, and knit, and keep everything neat and clean, you can stay with us and you shall want for nothing." Meanwhile, the queen asked her mirror again and was furious to learn that Snow White still lived. Disguising herself as an old peddler woman, she went to the dwarfs' house and tried to kill Snow White with a poisoned comb. But the dwarfs returned just in time and removed the comb, saving her life.</p>
+
+                <h2 id="para7">The Poisoned Apple</h2>
+                <p>The wicked queen, learning that Snow White still lived, became consumed with rage. She prepared a poison so deadly that even the smallest bite would be fatal. She made a beautiful apple, white and red, that looked so delicious anyone who saw it would want it. But the red side was poisoned. Disguising herself as a farmer's wife, she went to the dwarfs' house. Snow White was cautious at first, but when the old woman cut the apple in half and ate the white part, Snow White could not resist taking a bite of the beautiful red side. As soon as the piece was in her mouth, she fell down dead. The queen laughed cruelly and said, "White as snow, red as blood, black as ebony! This time the dwarfs cannot awaken you."</p>
+
+                <h2 id="para8">The Glass Coffin</h2>
+                <p>When the dwarfs came home that evening, they found Snow White lying on the ground, not breathing at all. They lifted her up and looked to see if there was anything poisonous, unlaced her dress, combed her hair, and washed her with water and wine, but nothing helped. The dear child was dead and remained dead. They laid her on a bier, and all seven of them sat down beside it and mourned for her. They wept for three days. They were going to bury her, but she still looked fresh, as if she were alive, and she still had her beautiful red cheeks. They said, "We cannot bury her in the black earth," and they had a transparent glass coffin made so she could be seen from all sides. They laid her inside and wrote her name on it in golden letters, noting that she was a king's daughter.</p>
+
+                <h2 id="para9">The Prince's Kiss</h2>
+                <p>They set the coffin outside on a mountain, and one of them always stayed by it and watched over it. The birds came too and mourned for Snow White, first an owl, then a raven, and finally a dove. Snow White lay in the coffin for a long, long time, and she did not decay. She looked as if she were asleep, for she was still as white as snow, as red as blood, and her hair was as black as ebony. One day a prince came to the dwarfs' house and saw the coffin on the mountain with beautiful Snow White inside. He read what was written on it in golden letters and said to the dwarfs, "Let me have the coffin. I will give you whatever you want for it." But the dwarfs answered, "We will not give it up for all the gold in the world." Then he said, "Then give it to me as a gift, for I cannot live without seeing Snow White."</p>
+
+                <h2 id="para10">Happily Ever After</h2>
+                <p>The good dwarfs took pity on him and gave him the coffin. The prince had his servants carry it away on their shoulders. Now it happened that they stumbled over a shrub, and the jolt freed the piece of poisoned apple from Snow White's throat. She opened her eyes, lifted the lid of the coffin, sat up, and was alive again. "Good heavens, where am I?" she cried out. The prince said joyfully, "You are with me," and he told her what had happened. Then he said, "I love you more than anything else in the world. Come with me to my father's castle and be my wife." Snow White loved him and went with him, and their wedding was celebrated with great splendor and magnificence. The wicked stepmother was invited to the feast, and when she arrived and saw that it was Snow White, she was so terrified that she could not move. She had to dance in red-hot iron shoes until she fell down dead.</p>
+            </div>
+        </div>
+
+        <div class="column right-column">
+            <h1>Chat</h1>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for table of contents links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const centerColumn = document.querySelector('.center-column');
+                
+                if (targetElement && centerColumn) {
+                    const offsetTop = targetElement.offsetTop - centerColumn.offsetTop;
+                    centerColumn.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mobile swipe functionality
+        if (window.innerWidth <= 768) {
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const container = document.querySelector('.container');
+            let currentView = 'center'; // left, center, right
+
+            document.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            document.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // Swiped left - hide left column or show center
+                        if (currentView === 'left') {
+                            container.className = 'container show-center';
+                            currentView = 'center';
+                        } else if (currentView === 'center') {
+                            container.className = 'container show-right';
+                            currentView = 'right';
+                        }
+                    } else {
+                        // Swiped right - show left column or hide right
+                        if (currentView === 'center') {
+                            container.className = 'container show-left';
+                            currentView = 'left';
+                        } else if (currentView === 'right') {
+                            container.className = 'container show-center';
+                            currentView = 'center';
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
