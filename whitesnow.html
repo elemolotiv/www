@@ -230,6 +230,13 @@
                 const targetElement = document.querySelector(targetId);
                 const centerColumn = document.querySelector('.center-column');
                 
+                // On mobile, hide the left column and show center
+                if (window.innerWidth <= 768) {
+                    const container = document.querySelector('.container');
+                    container.className = 'container show-center';
+                    currentView = 'center';
+                }
+                
                 if (targetElement && centerColumn) {
                     const offsetTop = targetElement.offsetTop - centerColumn.offsetTop;
                     centerColumn.scrollTo({
