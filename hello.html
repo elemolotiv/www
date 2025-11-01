@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4F46E5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Hello World">
+    <title>Hello World</title>
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkhlbGxvIFdvcmxkIiwKICAic2hvcnRfbmFtZSI6ICJIZWxsbyIsCiAgInN0YXJ0X3VybCI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIsCiAgInRoZW1lX2NvbG9yIjogIiM0RjQ2RTUiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSGRwWkhSb1BTSXhPVElpSUdobGFXZG9kRDBpTVRreUlqNDhjbVZqZENCM2FXUjBhRDBpTVRreUlpQm9aV2xuYUhROUlqRTVNaUlnWm1sc2JEMGlJelJHTkRaRk5TSXZQangwWlhoMElIZzlJalEwSWlCNVBTSXhNVEFpSUdacGJHdzlJbmRvYVhSbElpQm1iMjUwTFdaaGJXbHNlVDBpUVhKcFlXd2lJR1p2Ym5RdGMybDZaVDBpTkRnaUlIUmxlSFF0WVc1amFHOXlQU0p0YVdSa2JHVWlQa2dpUEM5MFpYaDBQangwWlhoMElIZzlJalEwSWlCNVBTSXhOVEFpSUdacGJHdzlJbmRvYVhSbElpQm1iMjUwTFdaaGJXbHNlVDBpUVhKcFlXd2lJR1p2Ym5RdGMybDZaVDBpTkRnaUlIUmxlSFF0WVc1amFHOXlQU0p0YVdSa2JHVWlQbGNsUEM5MFpYaDBQand2YzNablBnPT0iLAogICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9LAogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIZHBaSFJvUFNJMU1USWlJR2hsYVdkb2REMGlOVEV5SWo0OGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdabWxzYkQwaUl6UkdORFpGTlNJdlBqeDBaWGgwSUhnOUlqRXlOaUlnZVQwaU1qazJJaUJtYVd4c1BTSjNhR2wwWlNJZ1ptOXVkQzFtWVcxcGJIazlJa0Z5YVdGc0lpQm1iMjUwTFhOcGVtVTlJakV5T0NJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSTZTRHd2ZEdWNGRENDhkR1Y0ZENCNFBTSXhNallpSUhrOUlqUXdNQ0lnWm1sc2JEMGlkMmhwZEdVaUlHWnZiblF0Wm1GdGFXeDVQU0pCY21saGJDSWdabTl1ZEMxemFYcGxQU0l4TWpnaUlIUmxlSFF0WVc1amFHOXlQU0p0YVdSa2JHVWlQbGNsUEM5MFpYaDBQand2YzNablBnPT0iLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9CiAgXQp9">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgZmlsbD0iIzRGNDZFNSIvPjx0ZXh0IHg9IjQ0IiB5PSIxMTAiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkg8L3RleHQ+PHRleHQgeD0iNDQiIHk9IjE1MCIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VyE8L3RleHQ+PC9zdmc+">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .install-prompt {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+        }
+        
+        button:active {
+            transform: scale(0.95);
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World</h1>
+        
+        <div id="installPrompt" class="install-prompt hidden">
+            <p>Install this app on your device for quick access!</p>
+            <button id="installButton">Install App</button>
+        </div>
+        
+        <div id="iosPrompt" class="install-prompt hidden">
+            <p>To install on iOS:</p>
+            <p style="margin-top: 0.5rem;">Tap the Share button <span style="font-size: 1.5rem;">⎋</span> and select "Add to Home Screen"</p>
+        </div>
+    </div>
+
+    <script>
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register(
+                'data:application/javascript;base64,' + btoa(`
+                    const CACHE_NAME = 'hello-world-v1';
+                    
+                    self.addEventListener('install', (event) => {
+                        event.waitUntil(
+                            caches.open(CACHE_NAME).then((cache) => {
+                                return cache.addAll(['/']);
+                            })
+                        );
+                    });
+                    
+                    self.addEventListener('fetch', (event) => {
+                        event.respondWith(
+                            caches.match(event.request).then((response) => {
+                                return response || fetch(event.request);
+                            })
+                        );
+                    });
+                `)
+            ).catch(err => console.log('Service Worker registration failed:', err));
+        }
+
+        // Install prompt for Android/Desktop
+        let deferredPrompt;
+        const installPrompt = document.getElementById('installPrompt');
+        const installButton = document.getElementById('installButton');
+        const iosPrompt = document.getElementById('iosPrompt');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installPrompt.classList.remove('hidden');
+        });
+
+        installButton.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response: ${outcome}`);
+                deferredPrompt = null;
+                installPrompt.classList.add('hidden');
+            }
+        });
+
+        // Detect iOS devices
+        const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+        const isInStandaloneMode = ('standalone' in window.navigator) && (window.navigator.standalone);
+
+        if (isIos && !isInStandaloneMode) {
+            iosPrompt.classList.remove('hidden');
+        }
+
+        window.addEventListener('appinstalled', () => {
+            installPrompt.classList.add('hidden');
+            console.log('App installed successfully!');
+        });
+    </script>
+</body>
+</html>
